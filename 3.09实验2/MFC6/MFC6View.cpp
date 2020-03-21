@@ -56,7 +56,7 @@ void CMFC6View::OnDraw(CDC* pDC)
 		return;
 
 	// TODO: 在此处为本机数据添加绘制代码
-
+	pDC->TextOutW(10, 30, _T("点击鼠标左键生成随机椭圆"));
 	for (int i = 0; i < pDoc->ca.GetSize(); i++)
 	{
 		pDC->Ellipse(pDoc->ca.GetAt(i));
