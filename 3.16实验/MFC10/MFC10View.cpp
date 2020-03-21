@@ -58,6 +58,7 @@ void CMFC10View::OnDraw(CDC* pDC)
 		return;
 
 	// TODO: 在此处为本机数据添加绘制代码
+	pDC->TextOutW(100, 30, _T("于鼠标左键按下，移动直到抬起的这个过程，在按下时记录下鼠标位置, 抬起画出一个矩形"));
 	pDC->Rectangle(pDoc->m_tagRec);
 }
 
