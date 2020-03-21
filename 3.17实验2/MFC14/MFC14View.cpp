@@ -56,8 +56,12 @@ void CMFC14View::OnDraw(CDC* pDC)
 	if (!pDoc)
 		return;
 	CString s =_T( "按R生成矩形");
+	CString s1 = _T("按动键盘上下左右四键进行移动");
+	CString s2 = _T("按动HOME键矩形朝左上角增大，按动END键矩形朝右下角缩小，点击鼠标左键矩形恢复原状");
 	// TODO: 在此处为本机数据添加绘制代码
-	pDC->TextOutW(10, 50, s);
+	pDC->TextOutW(10, 60, s);
+	pDC->TextOutW(10, 80, s1);
+	pDC->TextOutW(10, 100, s2);
 	pDC->Rectangle(pDoc->m_clientRec);
 }
 
