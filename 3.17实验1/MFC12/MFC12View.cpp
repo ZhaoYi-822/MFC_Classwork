@@ -63,6 +63,7 @@ void CMFC12View::OnDraw(CDC* pDC)
 		return;
 
 	// TODO: 在此处为本机数据添加绘制代码
+	pDC->TextOutW(10, 50, _T("请点击鼠标左键，移动一段后释放鼠标左键"));
 	
 }
 
@@ -100,8 +101,8 @@ void CMFC12View::OnMouseMove(UINT nFlags, CPoint point)
 	
 	if (nFlags)
 	{
-		s.Format(_T("%d"), cout++);	
-		DC.TextOutW(20, 30, s);
+		s.Format(_T("鼠标移动次数：%d"), cout++);	
+		DC.TextOutW(100, 100, s);
 		
 	}
 	
@@ -124,8 +125,8 @@ void CMFC12View::OnLButtonUp(UINT nFlags, CPoint point)
 		num = 0;
 	if (m_point.x < b_point.x)
 		num = b_point.x - m_point.x;
-		s1.Format(_T("%d"), num);
-		DC.TextOutW(20, 100, s1);
+		s1.Format(_T("移动的像素：%d"), num);
+		DC.TextOutW(100, 130, s1);
 }
 
 
