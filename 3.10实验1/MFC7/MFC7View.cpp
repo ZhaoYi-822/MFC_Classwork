@@ -49,7 +49,7 @@ BOOL CMFC7View::PreCreateWindow(CREATESTRUCT& cs)
 
 // CMFC7View 绘图
 
-void CMFC7View::OnDraw(CDC* /*pDC*/)
+void CMFC7View::OnDraw(CDC* pDC)
 {
 	CMFC7Doc* pDoc = GetDocument();
 	ASSERT_VALID(pDoc);
@@ -57,6 +57,7 @@ void CMFC7View::OnDraw(CDC* /*pDC*/)
 		return;
 
 	// TODO: 在此处为本机数据添加绘制代码
+	pDC->TextOutW(10, 20, _T("鼠标的按下与抬起："));
 }
 
 
@@ -91,7 +92,7 @@ void CMFC7View::OnLButtonUp(UINT nFlags, CPoint point)
 	CView::OnLButtonUp(nFlags, point);
 	CString s = _T("左键正被抬起");
 	CClientDC dc(this);
-	dc.TextOutW(10,20,s);
+	dc.TextOutW(250,20,s);
 }
 
 
@@ -102,5 +103,5 @@ void CMFC7View::OnLButtonDown(UINT nFlags, CPoint point)
 	CView::OnLButtonDown(nFlags, point);
 	CString s = _T("左键正被按下");
 	CClientDC dc(this);
-	dc.TextOutW(10, 20, s);
+	dc.TextOutW(250, 20, s);
 }

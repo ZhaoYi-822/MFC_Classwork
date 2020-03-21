@@ -56,6 +56,7 @@ void CMFC8View::OnDraw(CDC* pDC)
 		return;
 
 	// TODO: 在此处为本机数据添加绘制代码
+	pDC->TextOutW(10,20,_T("请点击鼠标左键"));
 
 }
 
@@ -93,5 +94,5 @@ void CMFC8View::OnLButtonDown(UINT nFlags, CPoint point)
 	CString s;
 	s.Format(_T("A+B=%d"),pDoc->A+pDoc->B);
 	CClientDC dc(this);
-	dc.TextOutW(10,20,s);
+	dc.TextOutW(150,20,s);
 }
