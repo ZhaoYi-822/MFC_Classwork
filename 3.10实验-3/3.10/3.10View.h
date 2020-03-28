@@ -14,10 +14,10 @@ protected: // 仅从序列化创建
 // 特性
 public:
 	CMy310Doc* GetDocument() const;
-	bool set;
+
 // 操作
 public:
-	CArray<CRect, CRect> ca;
+
 // 重写
 public:
 	virtual void OnDraw(CDC* pDC);  // 重写以绘制该视图

@@ -32,7 +32,7 @@ CMy310View::CMy310View() noexcept
 {
 	// TODO: 在此处添加构造代码
 	
-	set = true;
+	
 }
 
 CMy310View::~CMy310View()
