@@ -127,9 +127,9 @@ void CMy4272View::OnFileOpen()
 		{
 			  s1 = s.c_str();
 	         img.Load(s1); 
-			 foo(img, sx, sy, w, h);
-		     img.Draw(dc.m_hDC, sx,sy,w,h);
+			 
 		}
-
+             foo(img, sx, sy, w, h);
+		     img.Draw(dc.m_hDC, sx,sy,w,h);
 	}
 }
