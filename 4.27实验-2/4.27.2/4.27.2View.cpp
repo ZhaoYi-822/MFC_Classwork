@@ -123,12 +123,11 @@ void CMy4272View::OnFileOpen()
 		string s;
 		int sx, sy, w, h;
 		int x = 10, y = 10;
-		while (ifs >> s)
-		{
+		ifs >> s;
 			  s1 = s.c_str();
 	         img.Load(s1); 
-			 
-		}
+
+		
              foo(img, sx, sy, w, h);
 		     img.Draw(dc.m_hDC, sx,sy,w,h);
 	}

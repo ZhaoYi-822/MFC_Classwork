@@ -1,16 +1,16 @@
 ﻿
-// 4.27.1Doc.h: CMy4271Doc 类的接口
+// 4.27.1.1Doc.h: CMy42711Doc 类的接口
 //
 
 
 #pragma once
 
 
-class CMy4271Doc : public CDocument
+class CMy42711Doc : public CDocument
 {
 protected: // 仅从序列化创建
-	CMy4271Doc() noexcept;
-	DECLARE_DYNCREATE(CMy4271Doc)
+	CMy42711Doc() noexcept;
+	DECLARE_DYNCREATE(CMy42711Doc)
 
 // 特性
 public:
@@ -29,7 +29,7 @@ public:
 
 // 实现
 public:
-	virtual ~CMy4271Doc();
+	virtual ~CMy42711Doc();
 #ifdef _DEBUG
 	virtual void AssertValid() const;
 	virtual void Dump(CDumpContext& dc) const;

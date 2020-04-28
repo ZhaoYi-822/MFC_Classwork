@@ -1,35 +1,35 @@
 ﻿
-// 4.27.1.cpp: 定义应用程序的类行为。
+// 4.27.1.1.cpp: 定义应用程序的类行为。
 //
 
 #include "pch.h"
 #include "framework.h"
 #include "afxwinappex.h"
 #include "afxdialogex.h"
-#include "4.27.1.h"
+#include "4.27.1.1.h"
 #include "MainFrm.h"
 
-#include "4.27.1Doc.h"
-#include "4.27.1View.h"
+#include "4.27.1.1Doc.h"
+#include "4.27.1.1View.h"
 
 #ifdef _DEBUG
 #define new DEBUG_NEW
 #endif
 
 
-// CMy4271App
+// CMy42711App
 
-BEGIN_MESSAGE_MAP(CMy4271App, CWinApp)
-	ON_COMMAND(ID_APP_ABOUT, &CMy4271App::OnAppAbout)
+BEGIN_MESSAGE_MAP(CMy42711App, CWinApp)
+	ON_COMMAND(ID_APP_ABOUT, &CMy42711App::OnAppAbout)
 	// 基于文件的标准文档命令
 	ON_COMMAND(ID_FILE_NEW, &CWinApp::OnFileNew)
 	ON_COMMAND(ID_FILE_OPEN, &CWinApp::OnFileOpen)
 END_MESSAGE_MAP()
 
 
-// CMy4271App 构造
+// CMy42711App 构造
 
-CMy4271App::CMy4271App() noexcept
+CMy42711App::CMy42711App() noexcept
 {
 	// 支持重新启动管理器
 	m_dwRestartManagerSupportFlags = AFX_RESTART_MANAGER_SUPPORT_ALL_ASPECTS;
@@ -42,20 +42,20 @@ CMy4271App::CMy4271App() noexcept
 
 	// TODO: 将以下应用程序 ID 字符串替换为唯一的 ID 字符串；建议的字符串格式
 	//为 CompanyName.ProductName.SubProduct.VersionInformation
-	SetAppID(_T("My4271.AppID.NoVersion"));
+	SetAppID(_T("My42711.AppID.NoVersion"));
 
 	// TODO:  在此处添加构造代码，
 	// 将所有重要的初始化放置在 InitInstance 中
 }
 
-// 唯一的 CMy4271App 对象
+// 唯一的 CMy42711App 对象
 
-CMy4271App theApp;
+CMy42711App theApp;
 
 
-// CMy4271App 初始化
+// CMy42711App 初始化
 
-BOOL CMy4271App::InitInstance()
+BOOL CMy42711App::InitInstance()
 {
 	// 如果一个运行在 Windows XP 上的应用程序清单指定要
 	// 使用 ComCtl32.dll 版本 6 或更高版本来启用可视化方式，
@@ -100,9 +100,9 @@ BOOL CMy4271App::InitInstance()
 	CSingleDocTemplate* pDocTemplate;
 	pDocTemplate = new CSingleDocTemplate(
 		IDR_MAINFRAME,
-		RUNTIME_CLASS(CMy4271Doc),
+		RUNTIME_CLASS(CMy42711Doc),
 		RUNTIME_CLASS(CMainFrame),       // 主 SDI 框架窗口
-		RUNTIME_CLASS(CMy4271View));
+		RUNTIME_CLASS(CMy42711View));
 	if (!pDocTemplate)
 		return FALSE;
 	AddDocTemplate(pDocTemplate);
@@ -125,7 +125,7 @@ BOOL CMy4271App::InitInstance()
 	return TRUE;
 }
 
-int CMy4271App::ExitInstance()
+int CMy42711App::ExitInstance()
 {
 	//TODO: 处理可能已添加的附加资源
 	AfxOleTerm(FALSE);
@@ -133,7 +133,7 @@ int CMy4271App::ExitInstance()
 	return CWinApp::ExitInstance();
 }
 
-// CMy4271App 消息处理程序
+// CMy42711App 消息处理程序
 
 
 // 用于应用程序“关于”菜单项的 CAboutDlg 对话框
@@ -169,13 +169,13 @@ BEGIN_MESSAGE_MAP(CAboutDlg, CDialogEx)
 END_MESSAGE_MAP()
 
 // 用于运行对话框的应用程序命令
-void CMy4271App::OnAppAbout()
+void CMy42711App::OnAppAbout()
 {
 	CAboutDlg aboutDlg;
 	aboutDlg.DoModal();
 }
 
-// CMy4271App 消息处理程序
+// CMy42711App 消息处理程序
 
 
 

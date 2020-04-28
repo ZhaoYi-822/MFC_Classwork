@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="4.27.1.h">
+    <ClInclude Include="4.27.1.1.h">
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="framework.h">
@@ -27,10 +27,10 @@
     <ClInclude Include="MainFrm.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="4.27.1Doc.h">
+    <ClInclude Include="4.27.1.1Doc.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="4.27.1View.h">
+    <ClInclude Include="4.27.1.1View.h">
       <Filter>头文件</Filter>
     </ClInclude>
     <ClInclude Include="Resource.h">
@@ -41,16 +41,16 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="4.27.1.cpp">
+    <ClCompile Include="4.27.1.1.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="MainFrm.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="4.27.1Doc.cpp">
+    <ClCompile Include="4.27.1.1Doc.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="4.27.1View.cpp">
+    <ClCompile Include="4.27.1.1View.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="pch.cpp">
@@ -58,20 +58,20 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ResourceCompile Include="My4271.rc">
+    <ResourceCompile Include="My42711.rc">
       <Filter>资源文件</Filter>
     </ResourceCompile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="res\My4271.rc2">
+    <None Include="res\My42711.rc2">
       <Filter>资源文件</Filter>
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Image Include="res\4.27.1Doc.ico">
+    <Image Include="res\4.27.1.1Doc.ico">
       <Filter>资源文件</Filter>
     </Image>
-    <Image Include="res\4.27.1.ico">
+    <Image Include="res\4.27.1.1.ico">
       <Filter>资源文件</Filter>
     </Image>
     <Image Include="res\Toolbar.bmp">

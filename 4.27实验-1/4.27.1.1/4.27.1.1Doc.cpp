@@ -1,5 +1,5 @@
 ﻿
-// 4.27.1Doc.cpp: CMy4271Doc 类的实现
+// 4.27.1.1Doc.cpp: CMy42711Doc 类的实现
 //
 
 #include "pch.h"
@@ -7,10 +7,10 @@
 // SHARED_HANDLERS 可以在实现预览、缩略图和搜索筛选器句柄的
 // ATL 项目中进行定义，并允许与该项目共享文档代码。
 #ifndef SHARED_HANDLERS
-#include "4.27.1.h"
+#include "4.27.1.1.h"
 #endif
 
-#include "4.27.1Doc.h"
+#include "4.27.1.1Doc.h"
 
 #include <propkey.h>
 
@@ -18,27 +18,27 @@
 #define new DEBUG_NEW
 #endif
 
-// CMy4271Doc
+// CMy42711Doc
 
-IMPLEMENT_DYNCREATE(CMy4271Doc, CDocument)
+IMPLEMENT_DYNCREATE(CMy42711Doc, CDocument)
 
-BEGIN_MESSAGE_MAP(CMy4271Doc, CDocument)
+BEGIN_MESSAGE_MAP(CMy42711Doc, CDocument)
 END_MESSAGE_MAP()
 
 
-// CMy4271Doc 构造/析构
+// CMy42711Doc 构造/析构
 
-CMy4271Doc::CMy4271Doc() noexcept
+CMy42711Doc::CMy42711Doc() noexcept
 {
 	// TODO: 在此添加一次性构造代码
 
 }
 
-CMy4271Doc::~CMy4271Doc()
+CMy42711Doc::~CMy42711Doc()
 {
 }
 
-BOOL CMy4271Doc::OnNewDocument()
+BOOL CMy42711Doc::OnNewDocument()
 {
 	if (!CDocument::OnNewDocument())
 		return FALSE;
@@ -52,9 +52,9 @@ BOOL CMy4271Doc::OnNewDocument()
 
 
 
-// CMy4271Doc 序列化
+// CMy42711Doc 序列化
 
-void CMy4271Doc::Serialize(CArchive& ar)
+void CMy42711Doc::Serialize(CArchive& ar)
 {
 	if (ar.IsStoring())
 	{
@@ -69,7 +69,7 @@ void CMy4271Doc::Serialize(CArchive& ar)
 #ifdef SHARED_HANDLERS
 
 // 缩略图的支持
-void CMy4271Doc::OnDrawThumbnail(CDC& dc, LPRECT lprcBounds)
+void CMy42711Doc::OnDrawThumbnail(CDC& dc, LPRECT lprcBounds)
 {
 	// 修改此代码以绘制文档数据
 	dc.FillSolidRect(lprcBounds, RGB(255, 255, 255));
@@ -90,7 +90,7 @@ void CMy4271Doc::OnDrawThumbnail(CDC& dc, LPRECT lprcBounds)
 }
 
 // 搜索处理程序的支持
-void CMy4271Doc::InitializeSearchContent()
+void CMy42711Doc::InitializeSearchContent()
 {
 	CString strSearchContent;
 	// 从文档数据设置搜索内容。
@@ -100,7 +100,7 @@ void CMy4271Doc::InitializeSearchContent()
 	SetSearchContent(strSearchContent);
 }
 
-void CMy4271Doc::SetSearchContent(const CString& value)
+void CMy42711Doc::SetSearchContent(const CString& value)
 {
 	if (value.IsEmpty())
 	{
@@ -120,19 +120,19 @@ void CMy4271Doc::SetSearchContent(const CString& value)
 
 #endif // SHARED_HANDLERS
 
-// CMy4271Doc 诊断
+// CMy42711Doc 诊断
 
 #ifdef _DEBUG
-void CMy4271Doc::AssertValid() const
+void CMy42711Doc::AssertValid() const
 {
 	CDocument::AssertValid();
 }
 
-void CMy4271Doc::Dump(CDumpContext& dc) const
+void CMy42711Doc::Dump(CDumpContext& dc) const
 {
 	CDocument::Dump(dc);
 }
 #endif //_DEBUG
 
 
-// CMy4271Doc 命令
+// CMy42711Doc 命令
