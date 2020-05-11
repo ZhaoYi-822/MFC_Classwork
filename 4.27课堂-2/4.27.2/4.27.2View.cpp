@@ -10,14 +10,9 @@
 #include "4.27.2.h"
 #endif
 
-#include<iostream>
-#include<string>
-#include<fstream>
-using namespace std;
-
 #include "4.27.2Doc.h"
 #include "4.27.2View.h"
-
+#include"MyDlg.h"
 #ifdef _DEBUG
 #define new DEBUG_NEW
 #endif
@@ -28,7 +23,7 @@ using namespace std;
 IMPLEMENT_DYNCREATE(CMy4272View, CView)
 
 BEGIN_MESSAGE_MAP(CMy4272View, CView)
-	ON_COMMAND(ID_FILE_OPEN, &CMy4272View::OnFileOpen)
+	ON_COMMAND(ID_Show, &CMy4272View::OnShow)
 END_MESSAGE_MAP()
 
 // CMy4272View 构造/析构
@@ -86,49 +81,14 @@ CMy4272Doc* CMy4272View::GetDocument() const // 非调试版本是内联的
 
 
 // CMy4272View 消息处理程序
-void CMy4272View::foo(CImage &img,int &sx,int &sy,int &w,int &h)
-{
-	CRect rect;
-	GetClientRect(&rect);
-	float rect_radio = 1.0 * rect.Width() / rect.Height();
-	float image_radio = 1.0 * img.GetWidth() / img.GetHeight();
 
-	if (rect_radio > image_radio)
-	{
-		h = rect.Height();
-		w = image_radio * h;
-		sx = (rect.Width() - w) / 2;
-		sy = 0;
-	}
-	else {
-		w = rect.Width();
-		h = w / image_radio;
-		sx = 0;
-		sy = (rect.Height() - h) / 2;
-	}
-}
 
-void CMy4272View::OnFileOpen()
+void CMy4272View::OnShow()
 {
 	// TODO: 在此添加命令处理程序代码
-	CFileDialog cfd(true);
-	CImage img;
-	CClientDC dc(this);
-	int t = cfd.DoModal();
-	if (t == IDOK)
+	MyDlg  DLG;
+	if (DLG.DoModal() == IDOK)
 	{
-		CString s1;
-		CString filename = cfd.GetPathName();
-		ifstream ifs(filename);
-		string s;
-		int sx, sy, w, h;
-		int x = 10, y = 10;
-		ifs >> s;
-			  s1 = s.c_str();
-	         img.Load(s1); 
 
-		
-             foo(img, sx, sy, w, h);
-		     img.Draw(dc.m_hDC, sx,sy,w,h);
 	}
 }

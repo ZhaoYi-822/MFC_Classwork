@@ -38,13 +38,11 @@ protected:
 protected:
 	DECLARE_MESSAGE_MAP()
 public:
-	afx_msg void OnFileOpen();
-	void foo(CImage& img, int& sx, int& sy, int& w, int& h);
+	afx_msg void OnShow();
 };
 
 #ifndef _DEBUG  // 4.27.2View.cpp 中的调试版本
 inline CMy4272Doc* CMy4272View::GetDocument() const
    { return reinterpret_cast<CMy4272Doc*>(m_pDocument); }
-
 #endif
 
